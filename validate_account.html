@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <label>Nhập tên đăng nhập</label>
+    <input type="text" value ="" id = "account"  onchange="validate()" />
+</div>
+<script>
+    function validate() {
+        var path =/^[_a-z0-9]{6,}$/;
+        var email = document.getElementById('account').value;
+        var result = path.test(email);
+        if(result = true) {
+            alert('Đăng nhập thành công');
+        }
+        else{
+            alert('Đăng nhập thất bại');
+        }
+    }
+</script>
+</body>
+</html>
